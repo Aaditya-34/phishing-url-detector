@@ -20,3 +20,13 @@ venv/
 # OS Files
 .DS_Store
 Thumbs.db
+
+# Data (too large for GitHub)
+data/*.csv
+!data/trusted_domains.txt
+online-valid.csv
+top-1m.csv*
+
+# Duplicate model copies (models/model.pkl is the deployed one)
+models/model_*.pkl
+.pytest_cache/

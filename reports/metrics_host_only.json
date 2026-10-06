@@ -1,0 +1,114 @@
+{
+  "mode": "host_only",
+  "dataset": "dataset.csv",
+  "n_urls": 31717,
+  "n_phishing": 11741,
+  "n_legit": 19976,
+  "n_train": 25809,
+  "n_test": 5908,
+  "n_features": 27,
+  "split": "group split by registered domain, 80/20, seed 42",
+  "cv_f1_mean_rf": 0.9097719228516074,
+  "cv_f1_std_rf": 0.006765017659864296,
+  "results": {
+    "Random Forest": {
+      "accuracy": 0.9348341232227488,
+      "precision": 0.9469964664310954,
+      "recall": 0.8449816079873883,
+      "f1": 0.8930852540960844,
+      "roc_auc": 0.944784468704713,
+      "false_positive_rate": 0.02247191011235955,
+      "train_seconds": 0.7,
+      "confusion_matrix": [
+        [
+          3915,
+          90
+        ],
+        [
+          295,
+          1608
+        ]
+      ]
+    },
+    "SVM (RBF)": {
+      "accuracy": 0.9368652674339878,
+      "precision": 0.9799247176913425,
+      "recall": 0.8208092485549133,
+      "f1": 0.8933371461252502,
+      "roc_auc": 0.9328965435349796,
+      "false_positive_rate": 0.007990012484394507,
+      "train_seconds": 13.88,
+      "confusion_matrix": [
+        [
+          3973,
+          32
+        ],
+        [
+          341,
+          1562
+        ]
+      ]
+    },
+    "Logistic Regression": {
+      "accuracy": 0.9328029790115098,
+      "precision": 0.9753787878787878,
+      "recall": 0.8118759852863899,
+      "f1": 0.8861485517636937,
+      "roc_auc": 0.9479725487649109,
+      "false_positive_rate": 0.009737827715355805,
+      "train_seconds": 0.06,
+      "confusion_matrix": [
+        [
+          3966,
+          39
+        ],
+        [
+          358,
+          1545
+        ]
+      ]
+    }
+  },
+  "top_features": [
+    [
+      "num_subdomains",
+      0.30423857157694617
+    ],
+    [
+      "hostname_length",
+      0.1657048526987557
+    ],
+    [
+      "url_length",
+      0.1451056630072284
+    ],
+    [
+      "num_dots",
+      0.14247783863611604
+    ],
+    [
+      "domain_entropy",
+      0.050128656455167314
+    ],
+    [
+      "tld_length",
+      0.03620412275628828
+    ],
+    [
+      "num_digits",
+      0.02887218623458913
+    ],
+    [
+      "digit_ratio",
+      0.025339563450226272
+    ],
+    [
+      "num_hyphens",
+      0.025016562413235965
+    ],
+    [
+      "letter_ratio",
+      0.023465370575704834
+    ]
+  ]
+}

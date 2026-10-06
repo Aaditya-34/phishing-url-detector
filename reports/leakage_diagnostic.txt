@@ -1,0 +1,11 @@
+﻿1) Accuracy using ONLY path/scheme features (carry no real host information):
+   0.9901   <- near 0.9+ means the dataset is leaking
+2) Accuracy using ALL features on full URLs:       0.9975
+3) Accuracy using ALL features on host-only URLs:  0.9348   <- fairer estimate
+   (evaluated on 31717 unique hosts with conflicting labels removed)
+
+Path-vs-label table (share of URLs that have a path beyond '/'):
+url       has path  no path
+label                      
+legit        0.000    1.000
+phishing     0.649    0.351

@@ -1,0 +1,16 @@
+{% extends "base.html" %}{% block body %}
+<h1>Prediction Result</h1>
+{% set v_icon = '🔴' if r.verdict == 'Phishing Website' else '🟡' if r.verdict == 'Suspicious Website' else '🟢' %}
+<h2>{{ v_icon }} {{ r.verdict }}</h2>
+<div class="url">{{ r.url }}</div>
+<p class="conf"><strong>ML Verdict:</strong> {{ r.label }} <small>({{ r.confidence }}% via {{ r.source }})</small></p>
+<p class="conf"><strong>Rule-Based Risk:</strong> {{ r.level }} <small>(Score: {{ r.score }}%)</small></p><hr>
+<h3>🛡️ Risk Analysis</h3>
+{% set cls = 'low' if r.score < 25 else 'mid' if r.score < 50 else 'high' %}
+<p class="lvl {{ cls }}">{{ r.level }}</p>
+<div class="track"><div class="fill {{ cls }}" style="width:{{ r.score }}%"></div></div>
+<p class="conf">Risk Score: {{ r.score }}%</p>
+<h3>Reasons</h3>
+{% for x in r.reasons %}<div class="reason {{ 'ok' if x.ok else 'bad' }}">{{ '✅' if x.ok else '⚠️' }} {{ x.text }}</div>{% endfor %}
+<a class="btn" href="/">Check Another URL</a>
+{% endblock %}

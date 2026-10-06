@@ -1,0 +1,13 @@
+{% extends "base.html" %}{% block body %}
+<h1>🛡️ AI Phishing Detector</h1><div class="bar"></div>
+<p class="sub">Detect phishing websites instantly using Machine Learning and explain their potential security risks with built-in risk analysis.</p>
+{% if error %}<p class="err">{{ error }}</p>{% endif %}
+<form method="post" action="/predict" id="f" class="row">
+  <input name="url" placeholder="https://example.com" required maxlength="2048" autofocus>
+  <button id="b">Scan Website</button>
+</form>
+<div class="feats"><div><b>⚡ Fast</b><span>Prediction in milliseconds</span></div>
+<div><b>🔒 Secure</b><span>ML based phishing detection</span></div>
+<div><b>📊 Risk Analysis</b><span>Explainable security insights</span></div></div>
+<script>document.getElementById('f').onsubmit=()=>{b.textContent='Scanning…';b.disabled=true;f.submit();return false}</script>
+{% endblock %}

@@ -1,0 +1,22 @@
+# Registered domains cleared instantly (exact match on domain+suffix)
+google.com
+youtube.com
+facebook.com
+microsoft.com
+apple.com
+amazon.com
+amazon.in
+github.com
+wikipedia.org
+linkedin.com
+twitter.com
+x.com
+instagram.com
+paypal.com
+netflix.com
+stackoverflow.com
+ieee.org
+iisc.ac.in
+sbi.co.in
+onlinesbi.sbi
+irctc.co.in

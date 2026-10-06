@@ -1,0 +1,35 @@
+{
+  "n_samples": 1000,
+  "feature_extraction": {
+    "mean_ms": 0.0239,
+    "p50_ms": 0.0222,
+    "p95_ms": 0.028,
+    "p99_ms": 0.0393,
+    "min_ms": 0.0188,
+    "max_ms": 0.442
+  },
+  "model_predict_proba": {
+    "mean_ms": 26.6715,
+    "p50_ms": 25.2045,
+    "p95_ms": 35.9457,
+    "p99_ms": 37.8939,
+    "min_ms": 23.7934,
+    "max_ms": 58.881
+  },
+  "detector_predict_ml_path": {
+    "mean_ms": 26.9918,
+    "p50_ms": 25.472,
+    "p95_ms": 36.2524,
+    "p99_ms": 40.6607,
+    "min_ms": 24.1731,
+    "max_ms": 63.2636
+  },
+  "detector_predict_whitelist_path": {
+    "mean_ms": 0.0307,
+    "p50_ms": 0.0295,
+    "p95_ms": 0.0337,
+    "p99_ms": 0.0432,
+    "min_ms": 0.0272,
+    "max_ms": 0.193
+  }
+}

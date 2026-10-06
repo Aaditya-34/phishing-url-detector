@@ -1,0 +1,114 @@
+{
+  "mode": "full_url",
+  "dataset": "dataset.csv",
+  "n_urls": 40000,
+  "n_phishing": 20000,
+  "n_legit": 20000,
+  "n_train": 28954,
+  "n_test": 11046,
+  "n_features": 27,
+  "split": "group split by registered domain, 80/20, seed 42",
+  "cv_f1_mean_rf": 0.9965492959063831,
+  "cv_f1_std_rf": 0.0007105383994745995,
+  "results": {
+    "Random Forest": {
+      "accuracy": 0.9974651457541192,
+      "precision": 0.9992903775191598,
+      "recall": 0.9967440543601359,
+      "f1": 0.9980155917788802,
+      "roc_auc": 0.9988177439758641,
+      "false_positive_rate": 0.0012556504269211452,
+      "train_seconds": 0.71,
+      "confusion_matrix": [
+        [
+          3977,
+          5
+        ],
+        [
+          23,
+          7041
+        ]
+      ]
+    },
+    "SVM (RBF)": {
+      "accuracy": 0.9968314321926489,
+      "precision": 0.9984399375975039,
+      "recall": 0.9966024915062288,
+      "f1": 0.9975203684024088,
+      "roc_auc": 0.998806438855939,
+      "false_positive_rate": 0.0027624309392265192,
+      "train_seconds": 4.28,
+      "confusion_matrix": [
+        [
+          3971,
+          11
+        ],
+        [
+          24,
+          7040
+        ]
+      ]
+    },
+    "Logistic Regression": {
+      "accuracy": 0.9973746152453377,
+      "precision": 0.9998578939889158,
+      "recall": 0.9960362400906002,
+      "f1": 0.9979434082689171,
+      "roc_auc": 0.9990443440840522,
+      "false_positive_rate": 0.00025113008538422905,
+      "train_seconds": 0.04,
+      "confusion_matrix": [
+        [
+          3981,
+          1
+        ],
+        [
+          28,
+          7036
+        ]
+      ]
+    }
+  },
+  "top_features": [
+    [
+      "num_slashes",
+      0.2705073737576185
+    ],
+    [
+      "path_length",
+      0.2344889437284463
+    ],
+    [
+      "url_length",
+      0.1453244861371515
+    ],
+    [
+      "num_subdomains",
+      0.11495760110255794
+    ],
+    [
+      "num_dots",
+      0.047841743262554685
+    ],
+    [
+      "num_digits",
+      0.038781829212525744
+    ],
+    [
+      "hostname_length",
+      0.03189938350049453
+    ],
+    [
+      "digit_ratio",
+      0.026557692940104412
+    ],
+    [
+      "num_hyphens",
+      0.01640143466949603
+    ],
+    [
+      "uses_https",
+      0.01506299165315791
+    ]
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "note": "Evaluates robustness to simple lexical evasion only, not a real adversary.",
+  "n_baseline_correct": 1609,
+  "baseline_detection_rate": 1.0,
+  "perturbations": {
+    "add_www_subdomain": {
+      "perturbation_name": "Add 'www' subdomain",
+      "description": "Prepends 'www.' to the hostname or replaces with www2.",
+      "detected_count": 1609,
+      "total_tested": 1609,
+      "detection_rate": 1.0,
+      "evasion_rate": 0.0,
+      "detection_rate_pct": 100.0,
+      "evasion_rate_pct": 0.0
+    },
+    "insert_one_hyphen": {
+      "perturbation_name": "Insert one hyphen",
+      "description": "Inserts a hyphen into the registered domain body.",
+      "detected_count": 1555,
+      "total_tested": 1609,
+      "detection_rate": 0.9664,
+      "evasion_rate": 0.0336,
+      "detection_rate_pct": 96.64,
+      "evasion_rate_pct": 3.36
+    },
+    "swap_tld_to_com": {
+      "perturbation_name": "Swap TLD to .com",
+      "description": "Replaces the original top-level domain with .com.",
+      "detected_count": 1555,
+      "total_tested": 1609,
+      "detection_rate": 0.9664,
+      "evasion_rate": 0.0336,
+      "detection_rate_pct": 96.64,
+      "evasion_rate_pct": 3.36
+    },
+    "append_short_numeric": {
+      "perturbation_name": "Append short numeric label",
+      "description": "Appends a numeric label (-01) to the domain name.",
+      "detected_count": 1541,
+      "total_tested": 1609,
+      "detection_rate": 0.9577,
+      "evasion_rate": 0.0423,
+      "detection_rate_pct": 95.77,
+      "evasion_rate_pct": 4.23
+    },
+    "lengthen_subdomain": {
+      "perturbation_name": "Lengthen subdomain",
+      "description": "Prepends an extra 'portal.' label to the subdomain structure.",
+      "detected_count": 1609,
+      "total_tested": 1609,
+      "detection_rate": 1.0,
+      "evasion_rate": 0.0,
+      "detection_rate_pct": 100.0,
+      "evasion_rate_pct": 0.0
+    }
+  }
+}
